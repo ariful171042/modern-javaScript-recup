@@ -191,7 +191,7 @@ student2.calcAge();
 // student1.calcAge(); */
 
 // 13. Regular Functions vs. Arrow Functions
-function sum(a, b = 0) {
+/* function sum(a, b = 0) {
   return a + b;
 }
 console.log(sum(2, 3));
@@ -214,13 +214,96 @@ function doMath(num1, num2, ...other) {
 }
 
 const arr = [2, 4, 4, 5, 6, 3];
-console.log(doMath(...arr));
+console.log(doMath(...arr)); */
 
 // 15. First-Class and Higher-Order Functions
-// 16. Functions Returning Functions
-// 17. Immediately Invoked Function Expressions (IIFE)
-// 18. The call and apply Methods
+
+/* function dobule(number) {
+  return number * 2;
+}
+
+function tripul(number) {
+  return number * 3;
+}
+
+function transformar(number, fn) {
+  return fn(number);
+}
+
+console.log(transformar(4, dobule));
+console.log(transformar(5, tripul)); */
+
+// 16. Functions Returning Functions ** caring funtion
+/* function test(a) {
+  return function (b) {
+    return function (c) {
+      return a + b + c;
+    };
+  };
+}
+
+console.log(test(2)(3)(4));
+
+const test2 = (a) => (b) => (c) => a + b + c; //lamda funtion / calculas function
+
+console.log(test2(2)(3)(4)); */
+
+/* // 17. Immediately Invoked Function Expressions (IIFE)
+
+(function () {
+  console.log("i will run once");
+})(); */
+
+// 18. The call and apply and bind Methods
 // 19. The bind Method
+
+/* const student = {
+  name: "arif",
+  birthYear: 1990,
+
+  calAge(name) {
+    return `${new Date().getFullYear() - this.birthYear} ${name} `;
+  },
+};
+
+const student2 = {
+  name: "rakib",
+  birthYear: 2000,
+};
+
+// console.log(student.calAge());
+// console.log(student2.call(calAge()));
+// console.log(student.calAge.call(student2, "rakib"));
+// const result = student.calAge.apply(student2, ["rakib"]);
+const result = student.calAge.bind(student2, "rakib");
+
+console.log(result()); */
+
 // 20. Sets
-// 21. Maps: Fundamentals
-// 22. Maps: Iteration
+/* const myset = new Set();
+myset.add(2);
+myset.add("hello");
+myset.add(false);
+myset.delete(false);
+console.log(myset);
+
+const arr = [2, 45, 5, 6, 4, 5, 3, 4, 5, 3];
+
+const arrToSet = [...new Set(arr)];
+
+console.log(arrToSet); */
+
+/* // 21. Maps: Fundamentals
+const animal = new Map();
+animal.set("tiger", 4);
+animal.set("lion", 5);
+animal.set("monkey", 10);
+
+animal.delete("lion");
+
+console.log(animal);
+
+for (const [anima, count] of animal) {
+  console.log(anima, count);
+}
+ */
